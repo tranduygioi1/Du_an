@@ -7,6 +7,11 @@ app.get('/', (req, res, next)=>{
     res.send('Hello')
 })
 
+app.get('/register', (req, res, next)=>{
+    res.send('Mơi ban dang nhap')
+})
+
+
 app.listen(POST, () => {
     console.log('Start Server')
 })
