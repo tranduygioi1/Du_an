@@ -17,15 +17,6 @@
     "morgan": "^1.10.0",
     "nodemon": "^3.1.4"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tranduygioi1/Du_an_demo.git"
-  },
-  "bugs": {
-    "url": "https://github.com/tranduygioi1/Du_an_demo/issues"
-  },
-  "homepage": "https://github.com/tranduygioi1/Du_an_demo#readme",
-
   "lint-staged": {
     "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write"
   },
@@ -34,11 +25,18 @@
       "pre-commit": "lint-staged"
     }
   },
-
   "devDependencies": {
     "husky": "^9.1.5",
     "lint-staged": "^15.2.9",
     "node-sass": "^9.0.0",
     "prettier": "^3.3.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tranduygioi1/Du_an.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tranduygioi1/Du_an/issues"
+  },
+  "homepage": "https://github.com/tranduygioi1/Du_an#readme"
 }
