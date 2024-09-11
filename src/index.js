@@ -6,6 +6,10 @@ var app = express();
 const POST = 4400;
 
 const route = require('./routes');
+const db = require('./config/db')
+//connect db
+db.connect()
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(
@@ -24,7 +28,7 @@ app.engine(
   engine({
     extname: '.hbs',
   }),
-);
+);      
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
 

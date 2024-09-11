@@ -1,0 +1,27 @@
+<div class="mt4">
+    <div class="row">
+        
+        <div class="col-lg-3">
+            <button class="read-now-button"> Read Now</button>
+        </div>
+
+        <div class="col-lg-9">
+            <h2 class="heading">{{course.name}}</h2>
+            
+            <!-- Kiểm tra xem videoId có tồn tại không trước khi hiển thị iframe -->
+            {{#if course.videoId}}
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{course.videoId}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            {{/if}}
+            
+             {{#unless course.videoId}}
+                {{#if course.novelId}}
+                    <a href="https://novelnext.dramanovels.io/nw/{{course.novelId}}" target="_blank">Read Now</a>
+                {{else}}
+                    <a href="https://novelnext.dramanovels.io/nw/{{course.slug}}" target="_blank">Read Now</a>
+                {{/if}}
+            {{/unless}}
+
+            <p>{{course.description}}</p>
+        </div>
+    </div>
+</div>
